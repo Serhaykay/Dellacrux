@@ -11,21 +11,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/57f2b8c508.js" crossorigin="anonymous"></script>
   <title>Document</title>
+  <script src="cart.js" async></script>
+  <script src="script.js" async></script>
 </head>
 
 <body>
   <section id="nav">
-    <a href="index.html">
-      <h1>Dellacrux</h1>
-    </a>
     <div class="navbar">
-      <ul id="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="product.html">Product</a></li>
-        <li><a class="active" href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
+      <a href="index.html" class="nav-branding"><h1>Dellacrux</h1></a>
+      <ul id="nav-menu">
+        <li class="nav-item"><a class="nav-links" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-links" href="product.html">Product</a></li>
+        <li class="nav-item"><a class="nav-links active" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-links" href="contact.html">Contact</a></li>
+        <li class="cartbag-1">
+          <a href="cart.html"><i class="fas fa-shopping-bag"><sub>0</sub></i></a>
+        </li>
       </ul>
+      <a class="cart-bag" href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
   </section>
 
@@ -119,44 +127,26 @@
         <br /><br />
         <h4>Follow us</h4>
         <li>
-          <a href="#"></a>
-          <a href="#"></a>
-          <a href="#"></a>
-          <a href="#"></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
         </li>
       </div>
       <div class="about">
         <h4>About</h4>
-        <a href="#">
-          <p>About us</p>
-        </a>
-        <a href="#">
-          <p>Delivery Information</p>
-        </a>
-        <a href="#">
-          <p>Privacy Policy</p>
-        </a>
-        <a href="#">
-          <p>Terms and Conditions</p>
-        </a>
+        <a href="#"><p>About us</p></a>
+        <a href="#"><p>Delivery Information</p></a>
+        <a href="#"><p>Privacy Policy</p></a>
+        <a href="#"><p>Terms and Conditions</p></a>
       </div>
       <div class="account">
         <h4>Account</h4>
-        <a href="#">
-          <p>Sign In</p>
-        </a>
-        <a href="#">
-          <p>View Cart</p>
-        </a>
-        <a href="#">
-          <p>My Wishlist</p>
-        </a>
-        <a href="#">
-          <p>Track My Order</p>
-        </a>
-        <a href="#">
-          <p>Help</p>
-        </a>
+        <a href="#"><p>Sign In</p></a>
+        <a href="#"><p>View Cart</p></a>
+        <a href="#"><p>My Wishlist</p></a>
+        <a href="#"><p>Track My Order</p></a>
+        <a href="#"><p>Help</p></a>
       </div>
       <div class="app">
         <h4>Install App</h4>

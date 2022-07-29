@@ -37,96 +37,75 @@ body{
 #nav{
     background-color: rgb(174, 175, 176);
     width: 100%;
-    padding: 30px 45px 15px 0;
     position: sticky;
     top: 0;
     left: 0;
+    box-shadow: 0 5px 15px #000;
+}
+li{
+    list-style: none;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+sub{
+    color: red;
+}
+#nav .navbar{
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 5px 15px #000;
-    position: relative;
-}
-#nav a{
     text-decoration: none;
-}
-#nav a h1{
-    margin-left: 45px;
-    text-decoration: none;
-    color: #000;
-}
-  
-
-#nav .navbar ul{
-    display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-#nav .navbar ul li{
-    list-style: none;
-    padding-left: 45px;
-}
-#nav .navbar ul li .active{
-    position: relative;
-}
-#nav .navbar ul li .active::after{
-    content: "";
-    position: absolute;
-    width: 65%;
-    height: 2px;
-    background-color: aqua;
-    bottom: -5px;
-    left: 0;
-
-}
-#nav .navbar ul li a
-{
-    text-decoration: none;
-    font-size: 16px;
-    color: #222;
-    cursor: pointer;
-    position: relative;
-    font-weight: 700;
-}
-#nav .navbar ul li a i{
-    color: aqua;
-    padding-right: 25px;
-    font-size: 21px;
-}
-
-#nav .navbar ul li a:hover::after{
-    content: "";
-    position: absolute;
-    height: 2px;
-    background-color: aqua;
-    width: 65%;
-    bottom: -5px;
-    left: 0;
+    padding: 0 40px;
+    height: 75px;
     font-weight: bold;
 }
-.mobile{
-    display: none;
-    position: absolute;
-    top: 10%;
-    right: 12px;
+.active{
+    border-bottom: 2px solid aqua;
 }
-.mobile li{
+#nav-menu{
     display: flex;
-    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
 }
-.mobile li a{
-    text-decoration: none;
-    font-size: 16px;
-    color: #222;
+.nav-branding{
+    font-size: 2rem;
+}
+.nav-links{
+    transition: 0.2s ease;
+}
+.nav-links:hover{
+    border-bottom: 2px solid aqua;
+}
+.cartbag-1{
+    font-size: 18px;
+}
+.cart-bag{
+    display: none;
+}
+.hamburger{
+    display: none;
     cursor: pointer;
-    position: relative;
-    font-weight: 700; 
 }
-.mobile li a i{
-    color: aqua;
-    padding-right: 25px;
-    font-size: 21px;
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: aqua;
 }
+
+
+
+
+
+
+
+
 
 /*header starts*/
 #header{
@@ -161,19 +140,6 @@ body{
     width: 30%;
     padding: 20px 50px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*products starts*/
 #products{
@@ -373,6 +339,21 @@ body{
     border: 1px solid #999;
     cursor: pointer;
     margin-bottom: 6px;
+}
+.contact li{
+    display: flex;
+    align-items: center;
+}
+.contact li a{
+    font-size: 16px;
+    padding-left: 10px;
+    align-items: center;
+    width: 100%;
+    font-weight: bold;
+    transition: .3s;
+}
+.contact li a:hover{
+    color: aqua;
 }
 #footer p{
     text-align: center;
@@ -753,59 +734,37 @@ span{
     h2{
         font-size: 13px;
     }
-    #nav {
+    .hamburger{
         display: block;
-        align-items: center;
-        width: 100%;
-        padding: 0;
     }
-    #nav a{
-        position: absolute;
-        margin-top: 20px;
+    .hamburger .active .bar:nth-child(2){
+        opacity: 0;
     }
-    #nav a h1 {
-        margin-left: 15px;
-        align-self: flex-start;
+    .hamburger .active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
     }
-    #nav ul{
-        width: 100%;
-        align-items: flex-start;
+    .hamburger .active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    #nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
         flex-direction: column;
-        padding-top: 60px;
-    }
-    #nav ul li{
+        background-color: #999;
+        width: 100%;
         text-align: center;
-        padding: 8px 0;
-        width: 100%;
+        transition: .3s;
     }
-    #nav .navbar ul li {
-        list-style: none;
-        padding-left: 0px;
+    .nav-item{
+        margin: 16px 0;
     }
-    #nav ul li a{
-        width: 100%;
-        padding: 8px 0;
-        width: 100%;
+    #nav-menu.active{
+        left: 0;
     }
-    #nav .navbar li:hover{
-        border-radius: 5px;
-        background-color: aqua;
-    }
-    #nav .navbar ul li a::after{
+    .cartbag-1{
         display: none;
-    }
-    #nav .navbar ul li a i {
-        display: none;
-    }
-    #nav .navbar.active{
-        display: block;
-    }
-    .mobile{
-        display:  flex;
-    }
-    .mobile li a:hover{
-        background-color: none;
-        border-radius: none;
     }
     #header p{
         padding: 0px 20px;
@@ -933,14 +892,14 @@ span{
         padding: 10px;
     }
     #contact-details {
-        padding: 0 30px;
+        padding: 0 20px;
         flex-wrap: wrap;
         margin: 15px auto;
     }
     #contact-details .map{
         padding-top: 25px;
         width: 100%;
-        margin-left: 0;
+        overflow-x: auto;
     }
     #meet-us {
         padding: 10px 30px;
@@ -978,18 +937,6 @@ span{
         margin-top: -4px;
         margin-left: 5px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
